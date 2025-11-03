@@ -1,0 +1,833 @@
+  [1m[35m (49.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-03 02:20:20.672315', '2025-11-03 02:20:20.672318') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-03 02:25:53.634262', '2025-11-03 02:25:53.634265') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.23.0.1 at 2025-11-03 02:26:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 377)
+Completed 200 OK in 17ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 7936)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20251103023118)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_o_razon_social" varchar, "identificacion" varchar, "correo" varchar, "direccion" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_identificacion" ON "clientes" ("identificacion")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_correo" ON "clientes" ("correo")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251103023118') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.23.0.1 at 2025-11-03 02:39:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 261)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 889)
+
+
+Started GET "/cliente" for 172.23.0.1 at 2025-11-03 02:39:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/cliente"):
+  
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:39:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/clientes"):
+  
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:41:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 2.4ms | Allocations: 10508)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 558)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 1795)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 547)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 558)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 547)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 551)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:44:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 547)
+
+
+Started GET "/clientes/edit" for 172.23.0.1 at 2025-11-03 02:45:18 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:17:in `show'
+Completed 404 Not Found in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3932)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:45:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 547)
+
+
+Started GET "/create" for 172.23.0.1 at 2025-11-03 02:48:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started GET "/clientes/create" for 172.23.0.1 at 2025-11-03 02:48:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 771)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:48:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 546)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-03 02:52:10.474464', '2025-11-03 02:52:10.474466') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20251103023118)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_o_razon_social" varchar, "identificacion" varchar, "correo" varchar, "direccion" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_identificacion" ON "clientes" ("identificacion")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_correo" ON "clientes" ("correo")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251103023118') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:52:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 28ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 8158)
+
+
+Started GET "/clienteshttp://0.0.0.0:3001/clientes" for 172.23.0.1 at 2025-11-03 02:56:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/clienteshttp:/0.0.0.0:3001/clientes"):
+  
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 02:56:25 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.3ms | Allocations: 1815)
+
+
+Started GET "/clientes." for 172.23.0.1 at 2025-11-03 03:00:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/clientes."):
+  
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:00:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 550)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 8158)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 559)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 558)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 558)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 559)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 547)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:01:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 547)
+
+
+Started GET "/" for 172.23.0.1 at 2025-11-03 03:01:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 548)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:05:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 8158)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 03:10:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"TechCorp Soluciones S.A.S.", "identificacion"=>"9001234567", "correo"=>"contacto@techcorp.com", "direccion"=>"Calle 100 # 10-20, Bogotá"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 0.0ms | Allocations: 554)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.6) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.6) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.6) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.6) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.6) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.6) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.6) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.6) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.6) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.6) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.6) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.6) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.6) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.6) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.6) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.6) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.6) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.6) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.6) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.6) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.6) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.6) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.4) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.2.4) lib/rack/etag.rb:29:in `call'
+rack (3.2.4) lib/rack/conditional_get.rb:44:in `call'
+rack (3.2.4) lib/rack/head.rb:15:in `call'
+actionpack (7.1.6) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.6) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.6) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.6) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.6) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.6) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.4) lib/rack/method_override.rb:28:in `call'
+rack (3.2.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in `call'
+actionpack (7.1.6) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.6) lib/rails/engine.rb:536:in `call'
+puma (7.1.0) lib/puma/configuration.rb:300:in `call'
+puma (7.1.0) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.1.0) lib/puma/thread_pool.rb:355:in `with_force_shutdown'
+puma (7.1.0) lib/puma/request.rb:100:in `handle_request'
+puma (7.1.0) lib/puma/server.rb:503:in `process_client'
+puma (7.1.0) lib/puma/server.rb:262:in `block in run'
+puma (7.1.0) lib/puma/thread_pool.rb:182:in `block in spawn_thread'
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:10:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 559)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:10:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:26:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 557)
+
+
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 03:10:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:17:in `show'
+Completed 404 Not Found in 9ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3525)
+
+
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 03:10:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 785)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 03:13:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"TechCorp Soluciones S.A.S.", "identificacion"=>"9001234567", "correo"=>"contacto@techcorp.com", "direccion"=>"Calle 100 # 10-20, Bogotá"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9001234567"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "contacto@techcorp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Create (0.1ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre_o_razon_social", "identificacion", "correo", "direccion", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nombre_o_razon_social", "TechCorp Soluciones S.A.S."], ["identificacion", "9001234567"], ["correo", "contacto@techcorp.com"], ["direccion", "Calle 100 # 10-20, Bogotá"], ["created_at", "2025-11-03 03:13:35.764045"], ["updated_at", "2025-11-03 03:13:35.764045"]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 201 Created in 48ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 15412)
+
+
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 03:13:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:18:in `show'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1342)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 03:13:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started POST "/facturas" for 172.23.0.1 at 2025-11-03 03:46:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/facturas"):
+  
+Started GET "/cliente/1" for 172.23.0.1 at 2025-11-03 03:53:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/cliente/1"):
+  
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 03:53:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:18:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 744)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-03 03:58:21.693769', '2025-11-03 03:58:21.693772') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20251103023118)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_o_razon_social" varchar, "identificacion" varchar, "correo" varchar, "direccion" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_identificacion" ON "clientes" ("identificacion")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_correo" ON "clientes" ("correo")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251103023118') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-03 04:07:16.616073', '2025-11-03 04:07:16.616076') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20251103023118)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_o_razon_social" varchar, "identificacion" varchar, "correo" varchar, "direccion" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_identificacion" ON "clientes" ("identificacion")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_correo" ON "clientes" ("correo")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251103023118') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:07:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 24ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 12002)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 04:08:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Soluciones Modernas Ltda.", "identificacion"=>"8005551234", "correo"=>"ventas@solucionesmodernas.com", "direccion"=>"Avenida Siempre Viva 742"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "8005551234"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "ventas@solucionesmodernas.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Create (0.2ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre_o_razon_social", "identificacion", "correo", "direccion", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nombre_o_razon_social", "Soluciones Modernas Ltda."], ["identificacion", "8005551234"], ["correo", "ventas@solucionesmodernas.com"], ["direccion", "Avenida Siempre Viva 742"], ["created_at", "2025-11-03 04:08:03.385977"], ["updated_at", "2025-11-03 04:08:03.385977"]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 201 Created in 59ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 14888)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:09:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 1.5ms | Allocations: 15133)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:14:25 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 31ms (Views: 14.8ms | ActiveRecord: 1.8ms | Allocations: 15133)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:15:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 26ms (Views: 12.7ms | ActiveRecord: 2.1ms | Allocations: 15133)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:20:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 626)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 04:46:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (1.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:18:in `show'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 4138)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+Started GET "/clientes/1" for 172.23.0.1 at 2025-11-03 04:51:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:18:in `show'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 16773)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 04:57:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 24ms (Views: 9.4ms | ActiveRecord: 1.8ms | Allocations: 15133)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 04:57:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Innovatech S.A.S.", "identificacion"=>"9012345678", "correo"=>"contacto@innovatech.com", "direccion"=>"Carrera 45 # 20-30, Bogotá"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9012345678"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "contacto@innovatech.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Create (0.2ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre_o_razon_social", "identificacion", "correo", "direccion", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nombre_o_razon_social", "Innovatech S.A.S."], ["identificacion", "9012345678"], ["correo", "contacto@innovatech.com"], ["direccion", "Carrera 45 # 20-30, Bogotá"], ["created_at", "2025-11-03 04:57:53.322962"], ["updated_at", "2025-11-03 04:57:53.322962"]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 201 Created in 34ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 7558)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:01:30 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 1.4ms | Allocations: 15199)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:05:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Innovatech S.A.S.", "identificacion"=>"9009876543", "correo"=>"contacto@innovatech.com", "direccion"=>"Calle 50 # 20-10, Bogotá"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (12.3ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9009876543"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "contacto@innovatech.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 422 Unprocessable Content in 47ms (Views: 0.8ms | ActiveRecord: 12.4ms | Allocations: 6963)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:06:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "cliente": {
+    "nombre_o_razon_social": Solutions",
+    "identificacion": "900676425",
+    "correo": "notieneo@notiene.com",
+    "direccion": "Calle 50 # 20-10, Bogotá"
+  }
+}
+Processing by ClientesController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 781)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/clientes_controller.rb:34:in `cliente_params'
+app/controllers/clientes_controller.rb:5:in `create'
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:06:25 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 703)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:06:30 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:06:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:06:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "cliente": {
+    "nombre_o_razon_social": Solutions",
+    "identificacion": "900676425",
+    "correo": "notieneo@notiene.com",
+    "direccion": "Calle 50 # 20-10, Bogotá"
+  }
+}
+Processing by ClientesController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 753)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/clientes_controller.rb:34:in `cliente_params'
+app/controllers/clientes_controller.rb:5:in `create'
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:06:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:07:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Soluciones Digitales S.A.S.", "identificacion"=>"9012345678", "correo"=>"info@solucionesdigitales.com", "direccion"=>"Carrera 15 # 45-60, Bogotá"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9012345678"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "info@solucionesdigitales.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 422 Unprocessable Content in 4ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2970)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:07:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Innovatech Ltda.", "identificacion"=>"9023456789", "correo"=>"contacto@innovatech.com", "direccion"=>"Calle 80 # 20-15, Medellín"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (5.4ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9023456789"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "contacto@innovatech.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 422 Unprocessable Content in 20ms (Views: 1.4ms | ActiveRecord: 5.8ms | Allocations: 2932)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:07:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Global Solutions S.A.S.", "identificacion"=>"9012345678", "correo"=>"info@globalsolutions.com", "direccion"=>"Carrera 50 # 10-30, Bogotá"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "9012345678"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "info@globalsolutions.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 422 Unprocessable Content in 21ms (Views: 1.4ms | ActiveRecord: 6.2ms | Allocations: 2920)
+
+
+Started POST "/clientes" for 172.23.0.1 at 2025-11-03 05:08:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as */*
+  Parameters: {"cliente"=>{"nombre_o_razon_social"=>"Global Solutions S.A.S.", "identificacion"=>"900676425", "correo"=>"info@globalsolutions.com", "direccion"=>"Carrera 50 # 10-30, Bogotá"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."identificacion" = ? LIMIT ?[0m  [["identificacion", "900676425"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."correo" = ? LIMIT ?[0m  [["correo", "info@globalsolutions.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mCliente Create (0.3ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre_o_razon_social", "identificacion", "correo", "direccion", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nombre_o_razon_social", "Global Solutions S.A.S."], ["identificacion", "900676425"], ["correo", "info@globalsolutions.com"], ["direccion", "Carrera 50 # 10-30, Bogotá"], ["created_at", "2025-11-03 05:08:20.590754"], ["updated_at", "2025-11-03 05:08:20.590754"]]
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:7:in `create'
+Completed 201 Created in 11ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 3849)
+
+
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:08:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 760)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes" for 172.23.0.1 at 2025-11-03 05:12:06 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `index'
+Completed 200 OK in 28ms (Views: 13.0ms | ActiveRecord: 1.7ms | Allocations: 15265)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: clientes:3000

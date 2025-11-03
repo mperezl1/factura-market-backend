@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: MyString
+  total: 9.99
+  fecha: 2025-11-03
+
+two:
+  cliente_id: MyString
+  total: 9.99
+  fecha: 2025-11-03

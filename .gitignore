@@ -1,0 +1,12 @@
+# Rails
+/log/*
+/tmp/*
+/db/*.sqlite3
+
+# Docker
+**/tmp/*
+**/data/*
+
+# Mac/Linux
+.DS_Store
+*.swp

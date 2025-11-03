@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # --- 1. Servicio de Clientes (Rails/SQLite) ---
+  clientes:
+    build: 
+      context: ./clientes
+      dockerfile: Dockerfile
+    container_name: clientes_service
+    ports:
+      - "3001:3000" # Accesible localmente en http://localhost:3001
+    volumes:
+      # Mapeo para persistir el archivo 'development.sqlite3' en el contenedor
+      - ./data/clientes:/app/db
+      # Mapeo del código fuente para desarrollo (opcional)
+      - ./clientes:/app
+    environment:
+      # Rails necesita saber dónde está su base de datos.
+      - DATABASE_URL=sqlite3:///db/development.sqlite3
+    networks:
+      - app-network
+    # Comando para crear la base de datos de Rails al inicio (útil en el primer arranque)
+    command: bash -c "rm -f /app/tmp/pids/server.pid && rails db:migrate && rails s -b 0.0.0.0"
+
+  # --- 2. Servicio de Facturas (Rails/SQLite) ---
+  facturas:
+    build: 
+      context: ./facturas
+      dockerfile: Dockerfile
+    container_name: facturas_service
+    ports:
+      - "3002:3000" # PUERTO CORREGIDO: Accesible localmente en http://localhost:3002
+    volumes:
+      - ./data/facturas:/app/db
+      - ./facturas:/app
+    environment:
+      - DATABASE_URL=sqlite3:///db/development.sqlite3
+    networks:
+      - app-network
+    command: bash -c "rm -f /app/tmp/pids/server.pid && rails db:migrate && rails s -b 0.0.0.0"
+
+  # --- 3. Base de Datos MongoDB ---
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_db
+    ports:
+      - "27017:27017" 
+    environment:
+      # Credenciales y base de datos inicial
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=auditoria_db
+    volumes:
+      # Volumen con nombre para la persistencia de datos de MongoDB
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+  # --- 4. Servicio de Auditoría (.NET/MongoDB) ---
+  auditoria:
+    build: 
+      context: ./auditoria
+      dockerfile: Dockerfile
+    container_name: auditoria_service
+    ports:
+      - "8080:8080" # Accesible localmente en http://localhost:8080
+    depends_on:
+      - mongodb # Asegura que MongoDB se inicie primero
+    environment:
+      # La URL de conexión a MongoDB, usando el nombre del servicio 'mongodb' y las credenciales
+      - ConnectionStrings__MongoDb=mongodb://root:example@mongodb:27017/auditoria_db?authSource=admin
+    networks:
+      - app-network
+
+volumes:
+  # Definición del volumen persistente para MongoDB
+  mongo-data:
+
+networks:
+  # Red compartida para la comunicación interna
+  app-network:
+    driver: bridge

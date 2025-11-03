@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factura Market Services - Clientes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  
+  <!-- ¡IMPORTANTE! Se añade la etiqueta de JavaScript para Turbo/interactividad. -->
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+
+<body>
+  <!-- ¡IMPORTANTE! Se añade el área para mostrar mensajes de éxito (notice) o error (alert). -->
+  <div style="padding: 10px; background-color: #f8f8f8; border-bottom: 1px solid #eee;">
+    <p style="color: green; font-weight: bold;"><%= notice %></p>
+    <p style="color: red; font-weight: bold;"><%= alert %></p>
+  </div>
+
+  <!-- <%= yield %> es donde se inserta el contenido de la vista actual (e.g., index.html.erb) -->
+  <%= yield %>
+</body>
+</html>
